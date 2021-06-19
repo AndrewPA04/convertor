@@ -10,10 +10,10 @@ def binToDec(binary):
 	exponent = 0
 	reversedBinary = binary[::-1]
 	for number in reversedBinary:
-		if(number=="1"):
+		if number=="1":
 			decimal += 2**exponent
 			exponent+= 1
-		elif(number=="0"):
+		elif number=="0":
 			exponent+= 1
 	return decimal		
 		
@@ -42,14 +42,17 @@ def binaryToText(binaryUser):
 	return text
 	
 
-while(True):
+while True:
 	option = int(input("Pick an option: "))
-	if(option==0):
+	if option==0:
 		break
-	elif(option==1):
+	elif option==1:
 		userBinary = str(input("Enter binary value: "))
 		print(binToDec(userBinary))
-	elif(option==2):
+	elif option==2:
 		userDecimal = int(input("Enter decimal value: "))
 		print(decToBin(userDecimal))
+	elif option==3:
+		userHex = str(input("Enter hexadecimal value: "))
+		print(hexToBin(userHex))
     	
