@@ -64,4 +64,6 @@ while True:
 		print(binaryToText(userBinary))
     elif option==5:
     	userText = str(input("Enter text: "))
+	else:
+		print("Wrong input")
     	
