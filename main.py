@@ -3,7 +3,6 @@ print("1:Binary to decimal\n")
 print("2:Decimal to binary\n")
 print("3:Hexadecimal to binary\n")
 print("4:Binary to text\n")
-print("5:Text to binary\n\n\n")
 
 def binToDec(binary):
 	decimal = 0
@@ -41,9 +40,6 @@ def binaryToText(binaryUser):
 		text += chr(decimal)
 	return text
 	
-def textToBinary(text):
-	text.encode("ascii")
-	
 	
 
 while True:
@@ -62,8 +58,6 @@ while True:
 	elif option==4:
 		userBinary = str(input("Enter binary value: "))
 		print(binaryToText(userBinary))
-    elif option==5:
-    	userText = str(input("Enter text: "))
 	else:
 		print("Wrong input")
     	
