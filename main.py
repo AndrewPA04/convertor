@@ -41,6 +41,10 @@ def binaryToText(binaryUser):
 		text += chr(decimal)
 	return text
 	
+def textToBinary(text):
+	text.encode("ascii")
+	
+	
 
 while True:
 	option = int(input("Pick an option: "))
@@ -55,4 +59,9 @@ while True:
 	elif option==3:
 		userHex = str(input("Enter hexadecimal value: "))
 		print(hexToBin(userHex))
+	elif option==4:
+		userBinary = str(input("Enter binary value: "))
+		print(binaryToText(userBinary))
+    elif option==5:
+    	userText = str(input("Enter text: "))
     	
