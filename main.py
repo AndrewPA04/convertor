@@ -26,12 +26,12 @@ def hexToBin(hexadecimal):
 	return format(int(hexadecimal, 16), "040b")
 	
 def binaryToText(binaryUser):
-	binaryArray = binary.split()
+	binaryArray = binaryUser.split()
 	decimal = 0
 	exponent = 0
 	text = ""
 	for binary in binaryArray:
-		for number in binary:
+		for number in binary[::-1]:
 			if(number=="1"):
 				decimal += 2**exponent
 				exponent+= 1
@@ -40,8 +40,8 @@ def binaryToText(binaryUser):
 		text += chr(decimal)
 	return text
 	
-	
 
+			
 while True:
 	option = int(input("Pick an option: "))
 	if option==0:
